@@ -1,0 +1,8 @@
+name = "kbDoc Hugo theme"
+license = "MIT"
+description = "A onepage theme for documentation"
+tags = ['documentation', 'one page']
+min_version = "0.59.0"
+
+[author]
+  name = "Eh Jewel"
