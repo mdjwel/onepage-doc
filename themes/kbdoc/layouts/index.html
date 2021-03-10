@@ -21,7 +21,11 @@
             {{ partial "navigation.html" . }}
             <div class="col-lg-8 col-md-8">
               <div class="documentation_info" id="post">
-                  
+                {{ range where .Site.Pages "Kind" "page" }}
+                <article class="documentation_body shortcode_text doc-section">
+                  {{.Content}}
+                </article>
+                {{end}}
               </div>
             </div>
             {{ partial "right-siderbar.html" . }}
