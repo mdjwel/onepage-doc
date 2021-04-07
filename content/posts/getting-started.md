@@ -1,10 +1,9 @@
 ---
-title: 'My First Post'
+title: 'Getting started'
+id: 'getting-started'
 date: 2021-02-13T10:10:18+06:00
 draft: false
 ---
-
-## Getting Started
 
 **Welcome to KbDoc !** Get familiar with the
 Stripe products and explore their features:

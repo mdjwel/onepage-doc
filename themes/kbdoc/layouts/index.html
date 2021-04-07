@@ -23,7 +23,7 @@
               <div class="documentation_info" id="post">
                 {{ range where .Site.Pages "Kind" "page" }}
                 <article class="documentation_body shortcode_text doc-section">
-                  {{.Content}}
+                  {{print "## " .Title | markdownify}} {{.Content}}
                 </article>
                 {{end}}
               </div>

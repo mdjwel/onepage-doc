@@ -3,109 +3,11 @@
     <h3 class="nav_title">Doc Navigation</h3>
     <div class="scroll">
       <ul class="list-unstyled nav-sidebar doc-nav">
+        {{ range where .Site.Pages "Kind" "page" }}
         <li class="nav-item active">
-          <a href="#doc" class="nav-link"
-            ><img src="img/onepage-icon/smiles-icon.png" alt="" />Getting
-            Started</a
-          >
+          <a href="#{{.Title | urlize}}" class="nav-link">{{.Title}}</a>
         </li>
-        <li class="nav-item">
-          <a href="#shortcodes" class="nav-link"
-            ><img
-              src="img/side-nav/briefcase.png"
-              alt="briefcase"
-            />Shortcodes</a
-          >
-          <ul class="list-unstyled dropdown_nav">
-            <li class="nav-item">
-              <a href="#tabs" class="nav-link">Tab</a>
-            </li>
-            <li class="nav-item">
-              <a href="#accordian" class="nav-link">Accordian</a>
-            </li>
-            <li class="nav-item">
-              <a href="#notice" class="nav-link">Notices</a>
-            </li>
-            <li class="nav-item">
-              <a href="#tooltip" class="nav-link">Tooltip</a>
-            </li>
-            <li class="nav-item">
-              <a href="#table" class="nav-link">Table</a>
-            </li>
-            <li class="nav-item">
-              <a href="#lightbox" class="nav-link">Lightbox</a>
-            </li>
-            <li class="nav-item">
-              <a href="#footnote" class="nav-link">Footnote</a>
-            </li>
-            <li class="nav-item">
-              <a href="#can-use" class="nav-link">Can I Use</a>
-            </li>
-          </ul>
-          <span class="icon">
-            <i class="icon_plus"></i>
-            <i class="icon_minus-06"></i>
-          </span>
-        </li>
-        <li class="nav-item">
-          <a href="#tour" class="nav-link"
-            ><img src="img/side-nav/chat1.png" alt="" />Tour</a
-          >
-          <span class="icon">
-            <i class="icon_plus"></i>
-            <i class="icon_minus-06"></i>
-          </span>
-          <ul class="list-unstyled dropdown_nav">
-            <li class="nav-item">
-              <a href="#pointing" class="nav-link">Image Hotspots</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a href="#typography" class="nav-link"
-            ><img src="img/side-nav/document.png" alt="" />Content</a
-          >
-          <span class="icon">
-            <i class="icon_plus"></i>
-            <i class="icon_minus-06"></i>
-          </span>
-          <ul class="list-unstyled dropdown_nav">
-            <li class="nav-item">
-              <a href="#code" class="nav-link">Code</a>
-            </li>
-            <li class="nav-item">
-              <a href="#img" class="nav-link">Image</a>
-            </li>
-            <li class="nav-item">
-              <a href="#video" class="nav-link">Video</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a href="#changelog" class="nav-link"
-            ><img src="img/side-nav/document2.png" alt="" />Change Log</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="#cheatsheet" class="nav-link"
-            ><img src="img/side-nav/book.png" alt="" />Cheatsheet</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="#ex1" class="nav-link"
-            ><img src="img/side-nav/chat.png" alt="" />Example Item</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="#ex2" class="nav-link"
-            ><img src="img/side-nav/coding.png" alt="" />Example Item 02</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="#ex3" class="nav-link"
-            ><img src="img/side-nav/support.png" alt="" />Example Item 03</a
-          >
-        </li>
+        {{end}}
       </ul>
     </div>
   </aside>
