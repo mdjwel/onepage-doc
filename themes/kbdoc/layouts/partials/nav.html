@@ -1,8 +1,16 @@
 <nav class="navbar navbar-expand-lg menu_one" id="stickyTwo">
   <div class="container-fluid pl-60 pr-60">
     <a class="navbar-brand" href="index.html">
-      <img src="img/logo.png" srcset="img/logo-2x.png 2x" alt="logo" />
-      <img src="img/logo-w.png" srcset="img/logo-w2x.png 2x" alt="logo" />
+      <img
+        src='{{ .Param "logo" | absURL }}'
+        srcset='{{ .Param "logo2x" | default "logo-2x.png" | absURL }} 2x'
+        alt="logo"
+      />
+      <img
+        src='{{ .Param "logoDark" | default "logo-w.png" | absURL }}'
+        srcset='{{ .Param "logoDark2x" | default "logo-w2x.png" | absURL }} 2x'
+        alt="logo"
+      />
     </a>
     <button
       class="navbar-toggler collapsed"
