@@ -1,0 +1,14 @@
+<div class="col-lg-2 doc_mobile_menu doc-sidebar display_none">
+  <aside class="doc_left_sidebarlist">
+    <h3 class="nav_title">Doc Navigation</h3>
+    <div class="scroll">
+      <ul class="list-unstyled nav-sidebar doc-nav">
+        {{ range where .Site.Pages "Kind" "page" }}
+        <li class="nav-item active">
+          <a href="#{{.Title | urlize}}" class="nav-link">{{.Title}}</a>
+        </li>
+        {{end}}
+      </ul>
+    </div>
+  </aside>
+</div>

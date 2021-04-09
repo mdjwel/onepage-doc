@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg menu_one" id="stickyTwo">
+  <div class="container-fluid pl-60 pr-60">
+    <a class="navbar-brand" href="index.html">
+      <img
+        src='{{ .Param "logo" | default "logo.png" | absURL }}'
+        srcset='{{ .Param "logo2x" | default "logo-2x.png" | absURL }} 2x'
+        alt="logo"
+      />
+      <img
+        src='{{ .Param "logoDark" | default "logo-w.png" | absURL }}'
+        srcset='{{ .Param "logoDark2x" | default "logo-w2x.png" | absURL }} 2x'
+        alt="logo"
+      />
+    </a>
+    <button
+      class="navbar-toggler collapsed"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="menu_toggle">
+        <span class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span class="hamburger-cross">
+          <span></span>
+          <span></span>
+        </span>
+      </span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav menu ml-auto">
+        {{range .Site.Menus.main}}
+        <li class="nav-item dropdown submenu active">
+          <a
+            href="{{ .URL }}"
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >{{.Name}}</a
+          >
+          <i
+            class="arrow_carrot-down_alt2 mobile_dropdown_icon"
+            aria-hidden="true"
+            data-toggle="dropdown"
+          ></i>
+          {{if .HasChildren }}
+          <ul class="dropdown-menu">
+            {{ range .Children }}
+            <li class="nav-item">
+              <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
+            </li>
+            {{ end }}
+          </ul>
+          {{end}}
+        </li>
+        {{end}}
+      </ul>
+    </div>
+  </div>
+</nav>

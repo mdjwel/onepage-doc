@@ -1,0 +1,40 @@
+<!-- inject:../components/baseHead/baseHeadStart.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+
+  <body
+    class="doc full-width-doc sticky-nav-doc onepage-doc"
+    data-spy="scroll"
+    data-target=".navbar"
+    data-offset="-120"
+  >
+    {{ partial "preloader.html" . }}
+    <div class="body_wrapper sticky_menu">
+      {{ partial "nav.html" . }}
+      <section class="doc_documentation_area onepage_doc_area" id="sticky_doc">
+        <div class="overlay_bg"></div>
+        <div class="container-fluid pl-60 pr-60">
+          <div class="row doc-container">
+            {{ partial "navigation.html" . }}
+            <div class="col-lg-8 col-md-8">
+              <div class="documentation_info" id="post">
+                {{ range where .Site.Pages "Kind" "page" }}
+                <article class="documentation_body shortcode_text doc-section">
+                  {{print "## " .Title | markdownify}} {{.Content}}
+                </article>
+                {{end}}
+              </div>
+            </div>
+            {{ partial "right-siderbar.html" . }}
+          </div>
+        </div>
+      </section>
+    </div>
+
+    {{ partial "footer-scripts.html" . }}
+  </body>
+</html>
+<!-- endinject -->
