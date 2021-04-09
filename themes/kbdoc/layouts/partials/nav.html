@@ -2,7 +2,7 @@
   <div class="container-fluid pl-60 pr-60">
     <a class="navbar-brand" href="index.html">
       <img
-        src='{{ .Param "logo" | absURL }}'
+        src='{{ .Param "logo" | default "logo.png" | absURL }}'
         srcset='{{ .Param "logo2x" | default "logo-2x.png" | absURL }} 2x'
         alt="logo"
       />
