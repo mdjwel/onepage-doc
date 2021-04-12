@@ -1,4 +1,4 @@
-name = "kbDoc Hugo theme"
+name = "Onepage-doc Hugo theme"
 license = "MIT"
 description = "A onepage theme for documentation"
 tags = ['documentation', 'one page']

@@ -1,0 +1,18 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+theme = 'onepage-doc'
+title = 'My New Hugo Site'
+
+[menu]
+
+[[menu.main]]
+name = 'Eh Jewel'
+url = 'https://github.com/mdjwel'
+
+[[menu.main]]
+name = 'sakib.dev'
+url = 'https://sakib.dev'
+
+[params]
+logo = 'logo.png'
+logo2x = 'logo.png'
