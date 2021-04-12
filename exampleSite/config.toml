@@ -11,7 +11,3 @@ url = 'https://github.com/mdjwel'
 [[menu.main]]
 name = 'sakib.dev'
 url = 'https://sakib.dev'
-
-[params]
-logo = 'logo.png'
-logo2x = 'logo.png'

@@ -14,5 +14,5 @@ logo2x = '<your file name>'
 You can actually add four versions of the logo:
 * `logo`
 * `logo2x` a high resolution version of the logo
-* `logo-w` logo for dark mode
-* `logo-w2x` high resolution logo for dark mode
+* `logoDark` logo for dark mode
+* `logoDark-2x` high resolution logo for dark mode
