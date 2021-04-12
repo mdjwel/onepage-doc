@@ -1,6 +1,6 @@
 languageCode = 'en-us'
 theme = 'onepage-doc'
-title = 'My New Hugo Site'
+title = 'Onepage Doc Demo'
 
 [menu]
 
