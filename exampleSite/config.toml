@@ -1,4 +1,3 @@
-baseURL = 'http://example.org/'
 languageCode = 'en-us'
 theme = 'onepage-doc'
 title = 'My New Hugo Site'
