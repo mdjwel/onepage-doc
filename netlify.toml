@@ -1,0 +1,6 @@
+[context.production.environment]
+HUGO_VERSION = "0.80.0"
+
+[build]
+base = 'exampleSite'
+publish = "public"

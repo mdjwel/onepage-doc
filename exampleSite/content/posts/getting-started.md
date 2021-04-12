@@ -1,25 +1,41 @@
 ---
 title: 'Getting started'
-id: 'getting-started'
-date: 2021-02-13T10:10:18+06:00
-draft: false
+weight: 1
 ---
 
-**Welcome to KbDoc !** Get familiar with the
-Stripe products and explore their features:
+Onepage-doc is a open source single page hugo theme for documentation. 
 
-To use KbDoc WordPress theme you must have WordPress engine
-installed. We assume you have a working version of WordPress
-already up and running. We also encourage you to actively
-use the links below. These useful resources cover most of
-the general WordPress questions you may have:
+#### Step 1: Install hugo
 
-- What is WordPress **[Wikipedia](https://en.wikipedia.org/wiki/WordPress)** and Wordpress FAQ **[Read here!](https://codex.wordpress.org/FAQ_New_To_WordPress)**su
-- Tutorial on how to Install WordPress
+First you have to install hugo. Follow the [instructions](https://gohugo.io/getting-started/installing) for your os.
 
-some code
+#### Step 2: Create a new site
 
-```js
-const arr = [1, 2, 3];
-const sq = arr.map(x => x ** 2);
+```bash
+hugo new site quickstart
+```
+
+The above will create a new Hugo site in a folder named quickstart.
+
+#### Step 3: Add the theme
+
+If you are using git, it is recommended to add the theme as a git submodule
+
+```bash
+cd quickstart
+git init
+git submodule add https://github.com/mdjwel/onepage-doc.git themes/onepage-doc
+```
+
+If you are not using git, you can:
+
+1. Download the theme as a zip file from [here]()
+2. Unzip it in the `themes` directory
+3. Rename the folder to `onepage-doc`
+
+
+Now add the theme to the site configuration
+
+```bash
+echo theme = \"onepage-doc\" >> config.toml
 ```

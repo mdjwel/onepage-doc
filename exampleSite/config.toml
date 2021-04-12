@@ -1,0 +1,13 @@
+languageCode = 'en-us'
+theme = 'onepage-doc'
+title = 'Onepage Doc Demo'
+
+[menu]
+
+[[menu.main]]
+name = 'Eh Jewel'
+url = 'https://github.com/mdjwel'
+
+[[menu.main]]
+name = 'sakib.dev'
+url = 'https://sakib.dev'
